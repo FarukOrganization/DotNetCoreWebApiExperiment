@@ -1,0 +1,23 @@
+<div class="table-responsive">
+<table *ngIf="products && products.length>0" class="table">
+<thead class="thead">
+ <td>Id</td>
+ <td>Image</td>
+ <td>Name</td>
+ <td>Description</td>
+ <td>Price</td>
+</thead>
+<tbody>
+ <tr *ngFor="let product of products" >
+   <td><img  [src]="product.imgurl" [style.with.px]="imagewidth"/> </td>
+   <td>{{product.id}}</td>
+   <td>{{product.name}}</td>
+   <td>{{product.description}}</td>
+   <td>{{product.price}}</td>
+ </tr>
+
+</tbody>
+</table>
+
+
+  </div>
