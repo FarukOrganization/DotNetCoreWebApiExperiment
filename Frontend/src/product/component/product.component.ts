@@ -22,15 +22,11 @@ ngOnInit() {
 getproducts()
 {
   this.productservice.getproducts().subscribe(products=>{ this.allproducts=products;});
-//   this.products=[
+//   this.allproducts=[
 //  {"id":1, "name":"Computer", "description":"This is desktop computer", "price": 500000,imgurl:"https://openclipart.org/download/288754/laptop-personification-work-ready-body-builder.svg"},
 //  {"id":2, "name":"Laptop", "description":"This is desktop computer", "price": 600000,imgurl:"https://openclipart.org/download/168489/PC.svg"}
-//   ]
+//   ];
 
-}
-
-
-
-  
+} 
 
 }
