@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCoreWebApi.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,12 +28,12 @@ namespace DotNetCoreWebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
+            app.UseCors(builder =>
+                    builder.WithOrigins("*"));
 
+            app.UseRequestTracker();
+
+            app.UseMvc();
         }
     }
 }
