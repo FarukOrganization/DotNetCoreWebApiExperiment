@@ -21,15 +21,15 @@ namespace DotNetCoreWebApi.Middleware
             var requestId = Guid.NewGuid();
             Debug.WriteLine($"Request : {requestId} - starttime :{DateTime.UtcNow} ");
 
-            try
-            {
+            //try
+            //{
                 // Call the next delegate/middleware in the pipeline
                 await _next(context);
-            }
-            catch(Exception ex)
-            {
-                Debug.WriteLine($"Request : {requestId} - Error :{ex.Message} ");
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    Debug.WriteLine($"Request : {requestId} - Error :{ex.Message} ");
+            //}
 
             Debug.WriteLine($"Request : {requestId} - Endtime :{DateTime.UtcNow} ");
 
